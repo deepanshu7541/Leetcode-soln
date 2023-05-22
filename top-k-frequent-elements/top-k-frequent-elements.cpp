@@ -10,7 +10,7 @@ public:
         }
         for(auto i:map){
             // cout<<i<<" ";
-            cout<<i.second<<" = "<<i.first<<endl;
+            // cout<<i.second<<" = "<<i.first<<endl;
             pq.push({i.second, i.first});
             // pq.push(make_pair(map[nums[i]].second, map[nums[i]].first));
         }
