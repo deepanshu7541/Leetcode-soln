@@ -28,7 +28,6 @@ public:
         ListNode * t1 = head;
         ListNode * t2 = head;
         int a = len-k;
-        cout<<len<<" "<<a<<endl;
         while(t1 && k>1){
             t1=t1->next;
             k--;
