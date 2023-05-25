@@ -1,5 +1,8 @@
 class Solution {
 public:
+
+//                      OPTIMISE IT LATER ON - USED O(n) space.
+
     string reverseWords(string s) {
         stack<string> st;
         string a;
@@ -14,14 +17,9 @@ public:
                 // cout<<s.subtr(0,i);
             }
         }
-        // while(!st.empty()){
-        //     cout<<st.top();
-        //     st.pop();
-        // }
 
         string x;
         while(!st.empty()){
-            cout<<st.top()<<"+";
             x+=st.top();
             if(st.size()!=1){
                 x+=" ";
