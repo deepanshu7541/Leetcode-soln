@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<int> asteroidCollision(vector<int>& asteroids) {
         stack<int> s1;
-        vector<int> ans;
+        
         for(int i=0; i<asteroids.size(); i++){
             //If the asteroid is positiveso push it in stack.
             if(s1.empty() || asteroids[i] > 0){
@@ -26,11 +26,19 @@ public:
                 }
             }
         }
+        vector<int> ans(s1.size());
+        for(int i=s1.size()-1; i>=0; i--){
+            ans[i] = s1.top();
+            s1.pop();
+        }
+        return ans;
+        /*
         while(!s1.empty()){
             ans.push_back(s1.top());
             s1.pop();
         }
         reverse(ans.begin(), ans.end());
         return ans;
+        */
     }
 };
